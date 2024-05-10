@@ -11,7 +11,11 @@ interface Params {
 export default function useWallet({ source }: Params) {
   const { open } = useWeb3Modal();
   const { open: isOpen } = useWeb3ModalState();
-  const { disconnect } = useDisconnect();
+  const { disconnect, error } = useDisconnect();
+  if (error !== null) {
+    window.localStorage.clear();
+    window.location.reload();
+  }
   const [ isModalOpening, setIsModalOpening ] = React.useState(false);
   const [ isClientLoaded, setIsClientLoaded ] = React.useState(false);
   const isConnectionStarted = React.useRef(false);
