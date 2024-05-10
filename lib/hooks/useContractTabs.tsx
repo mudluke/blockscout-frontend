@@ -1,4 +1,5 @@
 import React from 'react';
+import { useWalletClient } from 'wagmi';
 
 import type { Address } from 'types/api/address';
 
@@ -7,6 +8,7 @@ import ContractRead from 'ui/address/contract/ContractRead';
 import ContractWrite from 'ui/address/contract/ContractWrite';
 
 export default function useContractTabs(data: Address | undefined) {
+  useWalletClient();
   return React.useMemo(() => {
     return [
       { id: 'contact_code', title: 'Code', component: <ContractCode addressHash={ data?.hash }/> },
