@@ -47,7 +47,7 @@ class MyDocument extends Document {
           <script src="/envs.js"/>
 
           { /* FAVICON */ }
-          <link rel="icon" sizes="48x48" type="image/png" href="/favicon/favicon.png" />
+          <link rel="icon" sizes="48x48" type="image/png" href="/favicon/favicon.png"/>
           <link rel="icon" sizes="32x32" type="image/png" href="/favicon/favicon.png"/>
           <link rel="icon" sizes="16x16" type="image/png" href="/favicon/favicon.png"/>
           <link rel="apple-touch-icon" href="/favicon/favicon.png"/>
